@@ -68,7 +68,7 @@ rm -f out/target/product/$device/system/framework/*.odex
 # lunch device
 echo -e ""
 echo -e ${bldblu}"Lunching device"${txtrst}
-lunch "omni_$device-userdebug";
+lunch "cm_$device-userdebug";
 
 echo -e ""
 echo -e ${bldblu}"Starting compilation"${txtrst}
@@ -76,7 +76,7 @@ echo -e ${bldblu}"Starting compilation"${txtrst}
 make -j"$opt_jobs" bacon
 echo -e ""
 
-rm -f out/target/product/$device/omni_*-ota*.zip
+rm -f out/target/product/$device/cm_*-ota*.zip
 
 # finished? get elapsed time
 t2=$($DATE +%s)
